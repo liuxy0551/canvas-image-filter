@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>canvas-image-filter</title>
+        <style>
+            #app {
+                width: 1300px;
+                margin: 50px auto;
+                position: relative;
+            }
+            .row {
+                margin-bottom: 30px;
+                display: flex;
+            }
+            select {
+                padding: 5px 10px;
+            }
+            button {
+                padding: 4px 20px;
+                margin-left: 20px;
+            }
+            img {
+                margin-left: 20px;
+            }
+            .tip {
+                position: absolute;
+                top: 80px;
+            }
+            .new {
+                left: 20px;
+            }
+            .old {
+                left: 640px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <div class="row">
+                <select id="my-select">
+                    <option value="normal">正常</option>
+                    <option value="removeColor">去色效果</option>
+                    <option value="negative">底片效果</option>
+                    <option value="singleColor">单色效果</option>
+                    <option value="blackWhite">黑白效果</option>
+                    <option value="fluorescence">荧光效果</option>
+                </select>
+                <button onclick="initImage()">重置</button>
+            </div>
+
+            <div class="row">
+                <div class="tip new">处理后</div>
+                <div class="tip old">原图</div>
+                <canvas id="my-canvas"></canvas>
+                <img src="./img/photo.png" alt="">
+            </div>
+        </div>
+        <script src="./index.js"></script>
+    </body>
+</html>
